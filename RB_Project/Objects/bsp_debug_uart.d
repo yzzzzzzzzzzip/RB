@@ -36,6 +36,7 @@
   ra\fsp\inc\api\..\..\src\bsp\mcu\all\bsp_mcu_api.h \
   ra_gen\common_data.h ra\fsp\inc\instances\r_ioport.h \
   ra\fsp\inc\api\r_ioport_api.h ra_cfg\fsp_cfg\r_ioport_cfg.h \
-  ra_cfg\fsp_cfg\bsp\bsp_pin_cfg.h ra\fsp\inc\instances\r_sci_uart.h \
-  ra\fsp\inc\api\r_uart_api.h ra\fsp\inc\api\r_transfer_api.h \
-  ra_cfg\fsp_cfg\r_sci_uart_cfg.h
+  ra_cfg\fsp_cfg\bsp\bsp_pin_cfg.h ra\fsp\inc\instances\r_sci_i2c.h \
+  ra_cfg\fsp_cfg\r_sci_i2c_cfg.h ra\fsp\inc\api\r_i2c_master_api.h \
+  ra\fsp\inc\api\r_transfer_api.h ra\fsp\inc\instances\r_sci_uart.h \
+  ra\fsp\inc\api\r_uart_api.h ra_cfg\fsp_cfg\r_sci_uart_cfg.h

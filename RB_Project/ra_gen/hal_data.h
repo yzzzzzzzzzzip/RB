@@ -4,9 +4,20 @@
 #include <stdint.h>
 #include "bsp_api.h"
 #include "common_data.h"
+#include "r_sci_i2c.h"
+#include "r_i2c_master_api.h"
 #include "r_sci_uart.h"
             #include "r_uart_api.h"
 FSP_HEADER
+extern const i2c_master_cfg_t MPU_6050_cfg;
+/* I2C on SCI Instance. */
+extern const i2c_master_instance_t MPU_6050;
+#ifndef MPU_6050_callback
+void MPU_6050_callback(i2c_master_callback_args_t * p_args);
+#endif
+
+extern const sci_i2c_extended_cfg_t MPU_6050_cfg_extend;
+extern sci_i2c_instance_ctrl_t MPU_6050_ctrl;
 /** UART on SCI Instance. */
             extern const uart_instance_t      Debug_UART;
 

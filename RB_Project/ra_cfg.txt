@@ -137,8 +137,8 @@ FSP Configuration
       P109 A1 - - - - Disabled - - "AGT3: AGTOB3; CAN1: CTX1; CGC0: CLKOUT; DEBUG0: TDO; DEBUG0: TRACESWO; GPT_OPS0: GTOVUP; GPT1: GTIOC1A; SCI9: SDA9; SCI9: TXD9; SPI0: MOSIA" - None - - 
       P110 D3 - - - - Disabled - - "AGT3: AGTEE3; CAN1: CRX1; DEBUG0: TDI; GPT_OPS0: GTOVLO; GPT1: GTIOC1B; ICU0: IRQ03; SCI2: CTSRTS2; SCI9: RXD9; SCI9: SCL9; SPI0: MISOA" - None - - 
       P111 D4 - - - - Disabled - - "AGT5: AGTOA5; BUS_ASYNCH0: A05; GPT3: GTIOC3A; ICU0: IRQ04; SCI2: SCK2; SCI9: SCK9; SPI0: RSPCKA" - None - - 
-      P112 B2 - - - - Disabled - - "AGT5: AGTOB5; BUS_ASYNCH0: A04; GPT3: GTIOC3B; OSPI0: OMCS1; QSPI0: QSSL; SCI1: SCK1; SCI2: SDA2; SCI2: TXD2; SPI0: SSLA0; SSI0: SSIBCK0" - None - - 
-      P113 B1 - - - - Disabled - - "AGT5: AGTEE5; BUS_ASYNCH0: A03; GPT2: GTIOC2A; SCI2: RXD2; SCI2: SCL2; SSI0: SSILRCK0" - None - - 
+      P112 B2 SCI2_SDA2 - Low - "Peripheral mode" "n-ch open drain" None "AGT5: AGTOB5; BUS_ASYNCH0: A04; GPT3: GTIOC3B; OSPI0: OMCS1; QSPI0: QSSL; SCI1: SCK1; SCI2: SDA2; SCI2: TXD2; SPI0: SSLA0; SSI0: SSIBCK0" - IO - - 
+      P113 B1 SCI2_SCL2 - Low - "Peripheral mode" "n-ch open drain" None "AGT5: AGTEE5; BUS_ASYNCH0: A03; GPT2: GTIOC2A; SCI2: RXD2; SCI2: SCL2; SSI0: SSILRCK0" - IO - - 
       P114 C2 - - - - Disabled - - "AGT5: AGTIO5; BUS_ASYNCH0: A02; GPT2: GTIOC2B; SCI9: CTS9; SSI0: SSIRXD0" - None - - 
       P115 C1 - - - - Disabled - - "BUS_ASYNCH0: A01; GPT4: GTIOC4A; SSI0: SSITXD0" - None - - 
       P200 C8 - - - - Disabled - - "ICU0: NMI" - None - - 
@@ -302,6 +302,11 @@ FSP Configuration
     RS-485 Support: Disable
     IrDA Support: Disabled
     
+  Module "I2C Master (r_sci_i2c)"
+    Parameter Checking: Default (BSP)
+    DTC on Transmission and Reception: Disabled
+    10-bit slave addressing: Disabled
+    
   FreeRTOS
     General: Custom FreeRTOSConfig.h: 
     General: Use Preemption: Enabled
@@ -408,6 +413,20 @@ FSP Configuration
       Interrupts: Transmit Data Empty Interrupt Priority: Priority 12
       Interrupts: Transmit End Interrupt Priority: Priority 12
       Interrupts: Error Interrupt Priority: Priority 12
+      
+    Instance "MPU_6050 I2C Master (r_sci_i2c)"
+      Name: MPU_6050
+      Channel: 2
+      Slave Address : 0x68
+      Address Mode: 7-Bit
+      Rate: Standard
+      Custom Rate (bps): 0
+      SDA Output Delay (nano seconds): 300
+      Noise filter setting: Use clock signal divided by 1 with noise filter
+      Bit Rate Modulation: Enable
+      Callback: MPU_6050_callback
+      Interrupt Priority Level: Priority 12
+      RX Interrupt Priority Level [Only used when DTC is enabled]: Disabled
       
   Thread "debug_uart"
     Symbol: debug_uart

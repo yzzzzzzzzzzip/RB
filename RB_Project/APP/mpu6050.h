@@ -9,7 +9,7 @@
 #define M_PI 3.1415926535f  // 浮点型f，适配float计算，避免精度损失
 #endif
 #include <math.h>
-#include "bsp_SysTick.h"  // 新增：包含独立SysTick驱动头文件
+
 // ************************* 函数声明 *************************
 fsp_err_t Init_I2C_Driver(void);  // MPU6050初始化（解除睡眠、配置默认参数）
 fsp_err_t MPU6050_WriteReg(uint8_t reg, uint8_t data);
