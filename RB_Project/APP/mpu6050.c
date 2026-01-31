@@ -278,9 +278,11 @@ GyroZ_dps = (float)MPU6050_GyroZ / 131.0f - Gyro_Offset[2];
 void MPU6050_AHRS_Complementary(void)
 {
     // 1. 计算两次解算的时间差dt（单位：s，SysTick_Handler中实现ms计时）
-    uint32_t now_time = HAL_GetTick(); // 替换为你的系统ms级计时函数（必做！）
-    float dt = (float)(now_time - last_time) / 1000.0f;
-    last_time = now_time;
+	
+    //uint32_t now_time = HAL_GetTick(); // 替换为你的系统ms级计时函数（必做！）
+	
+    //float dt = (float)(now_time - last_time) / 1000.0f;
+   // last_time = now_time;
     if (dt <= 0.001f) dt = 0.001f; // 避免dt为0，防止除零错误
 	
     // 计算加速度计的动态变化率（判断是否处于静态）
