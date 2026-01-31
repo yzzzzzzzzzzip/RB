@@ -8,5 +8,16 @@
         <peripheral name="PORT3" group="PORT">
             <slot name="P300" secure="true"/>
         </peripheral>
+        <peripheral name="PORT6" group="PORT">
+            <slot name="P613" secure="true"/>
+            <slot name="P614" secure="true"/>
+        </peripheral>
+        <peripheral name="SCI7" group="SCI" security=""/>
+        <peripheral name="ICU">
+            <slot name="IRQ0" secure="true"/>
+            <slot name="IRQ1" secure="true"/>
+            <slot name="IRQ2" secure="true"/>
+            <slot name="IRQ3" secure="true"/>
+        </peripheral>
     </partition>
 </azone>
