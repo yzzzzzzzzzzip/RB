@@ -4,9 +4,9 @@
 #if 0
                 static StaticTask_t debug_uart_memory;
                 #if defined(__ARMCC_VERSION)           /* AC6 compiler */
-                static uint8_t debug_uart_stack[1024] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+                static uint8_t debug_uart_stack[8192] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
                 #else
-                static uint8_t debug_uart_stack[1024] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.debug_uart") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+                static uint8_t debug_uart_stack[8192] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.debug_uart") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
                 #endif
                 #endif
                 TaskHandle_t debug_uart;
@@ -36,7 +36,7 @@ extern uint32_t g_fsp_common_thread_count;
                     #endif
                         debug_uart_func,
                         (const char *)"debug_uart",
-                        1024/4, // In words, not bytes
+                        8192/4, // In words, not bytes
                         (void *) &debug_uart_parameters, //pvParameters
                         1,
                         #if 0

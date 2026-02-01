@@ -26,6 +26,7 @@
 ".\objects\bsp_sdram.o"
 ".\objects\bsp_security.o"
 ".\objects\r_ioport.o"
+".\objects\r_sci_i2c.o"
 ".\objects\r_sci_uart.o"
 ".\objects\port.o"
 ".\objects\common_data.o"

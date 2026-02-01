@@ -4,6 +4,8 @@
     <partition>
         <peripheral name="PORT1" group="PORT">
             <slot name="P108" secure="true"/>
+            <slot name="P112" secure="true"/>
+            <slot name="P113" secure="true"/>
         </peripheral>
         <peripheral name="PORT3" group="PORT">
             <slot name="P300" secure="true"/>
@@ -13,11 +15,14 @@
             <slot name="P614" secure="true"/>
         </peripheral>
         <peripheral name="SCI7" group="SCI" security=""/>
+        <peripheral name="SCI2" group="SCI" security=""/>
         <peripheral name="ICU">
             <slot name="IRQ0" secure="true"/>
             <slot name="IRQ1" secure="true"/>
             <slot name="IRQ2" secure="true"/>
             <slot name="IRQ3" secure="true"/>
+            <slot name="IRQ4" secure="true"/>
+            <slot name="IRQ5" secure="true"/>
         </peripheral>
     </partition>
 </azone>

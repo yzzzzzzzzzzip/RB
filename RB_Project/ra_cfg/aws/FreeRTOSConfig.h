@@ -62,10 +62,10 @@
             #define configMAX_TASK_NAME_LEN (16)
             #endif
             #ifndef configUSE_TRACE_FACILITY
-            #define configUSE_TRACE_FACILITY (0)
+            #define configUSE_TRACE_FACILITY (1)
             #endif
             #ifndef configUSE_STATS_FORMATTING_FUNCTIONS
-            #define configUSE_STATS_FORMATTING_FUNCTIONS (0)
+            #define configUSE_STATS_FORMATTING_FUNCTIONS (1)
             #endif
             #ifndef configUSE_16_BIT_TICKS
             #define configUSE_16_BIT_TICKS (0)
@@ -92,7 +92,7 @@
             #define configUSE_ALTERNATIVE_API (0U)
             #endif
             #ifndef configCHECK_FOR_STACK_OVERFLOW
-            #define configCHECK_FOR_STACK_OVERFLOW (0)
+            #define configCHECK_FOR_STACK_OVERFLOW (1)
             #endif
             #ifndef configQUEUE_REGISTRY_SIZE
             #define configQUEUE_REGISTRY_SIZE (10)
@@ -128,7 +128,7 @@
             #define configSUPPORT_DYNAMIC_ALLOCATION (1)
             #endif
             #ifndef configTOTAL_HEAP_SIZE
-            #define configTOTAL_HEAP_SIZE (10240)
+            #define configTOTAL_HEAP_SIZE (102400)
             #endif
             #ifndef configAPPLICATION_ALLOCATED_HEAP
             #define configAPPLICATION_ALLOCATED_HEAP (0)
@@ -200,7 +200,7 @@
             #define INCLUDE_xTaskGetCurrentTaskHandle (1)
             #endif
             #ifndef INCLUDE_uxTaskGetStackHighWaterMark
-            #define INCLUDE_uxTaskGetStackHighWaterMark (0)
+            #define INCLUDE_uxTaskGetStackHighWaterMark (1)
             #endif
             #ifndef INCLUDE_xTaskGetIdleTaskHandle
             #define INCLUDE_xTaskGetIdleTaskHandle (0)
@@ -224,7 +224,7 @@
             #define INCLUDE_xTaskResumeFromISR (1)
             #endif
             #ifndef RM_FREERTOS_PORT_CFG_HW_STACK_MONITOR_ENABLE
-            #define RM_FREERTOS_PORT_CFG_HW_STACK_MONITOR_ENABLE  (0)
+            #define RM_FREERTOS_PORT_CFG_HW_STACK_MONITOR_ENABLE  (1)
             #endif
             #ifndef configPRINT_STRING
             #define configPRINT_STRING(x)                      (vLoggingPrint(x))

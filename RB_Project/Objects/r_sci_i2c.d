@@ -1,7 +1,8 @@
-./objects/mpu6050.o: APP\mpu6050.c APP\mpu6050.h ra_gen\hal_data.h \
-  ra\fsp\inc\api\bsp_api.h ra\fsp\inc\api\fsp_common_api.h \
-  ra\fsp\inc\fsp_version.h ra_cfg\fsp_cfg\bsp\bsp_cfg.h \
-  ra_gen\bsp_clock_cfg.h ra_cfg\fsp_cfg\bsp\bsp_mcu_family_cfg.h \
+./objects/r_sci_i2c.o: D:\RB\RB_Project\ra\fsp\src\r_sci_i2c\r_sci_i2c.c \
+  ra\fsp\inc\instances\r_sci_i2c.h ra\fsp\inc\api\bsp_api.h \
+  ra\fsp\inc\api\fsp_common_api.h ra\fsp\inc\fsp_version.h \
+  ra_cfg\fsp_cfg\bsp\bsp_cfg.h ra_gen\bsp_clock_cfg.h \
+  ra_cfg\fsp_cfg\bsp\bsp_mcu_family_cfg.h \
   ra_cfg\fsp_cfg\bsp\bsp_mcu_device_pn_cfg.h \
   ra_cfg\fsp_cfg\bsp\bsp_mcu_device_cfg.h \
   ra_cfg\fsp_cfg\bsp\..\..\..\ra\fsp\src\bsp\mcu\ra6m5\bsp_mcu_info.h \
@@ -33,18 +34,5 @@
   ra\fsp\inc\api\..\..\inc\..\..\fsp\src\bsp\mcu\all\bsp_compiler_support.h \
   ra\fsp\inc\api\..\..\src\bsp\mcu\all\bsp_delay.h \
   ra\fsp\inc\api\..\..\src\bsp\mcu\all\bsp_mcu_api.h \
-  ra_gen\common_data.h ra\fsp\inc\instances\r_ioport.h \
-  ra\fsp\inc\api\r_ioport_api.h ra_cfg\fsp_cfg\r_ioport_cfg.h \
-  ra_cfg\fsp_cfg\bsp\bsp_pin_cfg.h ra\fsp\inc\instances\r_sci_i2c.h \
   ra_cfg\fsp_cfg\r_sci_i2c_cfg.h ra\fsp\inc\api\r_i2c_master_api.h \
-  ra\fsp\inc\api\r_transfer_api.h ra\fsp\inc\instances\r_sci_uart.h \
-  ra\fsp\inc\api\r_uart_api.h ra_cfg\fsp_cfg\r_sci_uart_cfg.h \
-  ra\aws\FreeRTOS\FreeRTOS\Source\include\FreeRTOS.h \
-  ra_cfg\aws\FreeRTOSConfig.h \
-  ra\aws\FreeRTOS\FreeRTOS\Source\include\projdefs.h \
-  ra\aws\FreeRTOS\FreeRTOS\Source\include\portable.h \
-  ra\aws\FreeRTOS\FreeRTOS\Source\include\deprecated_definitions.h \
-  ra\fsp\src\rm_freertos_port\portmacro.h \
-  ra\aws\FreeRTOS\FreeRTOS\Source\include\mpu_wrappers.h \
-  ra\aws\FreeRTOS\FreeRTOS\Source\include\task.h \
-  ra\aws\FreeRTOS\FreeRTOS\Source\include\list.h APP\bsp_debug_uart.h
+  ra\fsp\inc\api\r_transfer_api.h

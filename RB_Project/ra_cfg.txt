@@ -321,8 +321,8 @@ FSP Configuration
     General: Max Priorities: 5
     General: Minimal Stack Size: 128
     General: Max Task Name Len: 16
-    Stats: Use Trace Facility: Disabled
-    Stats: Use Stats Formatting Functions: Disabled
+    Stats: Use Trace Facility: Enabled
+    Stats: Use Stats Formatting Functions: Enabled
     General: Use 16-bit Ticks: Disabled
     General: Idle Should Yield: Enabled
     General: Use Task Notifications: Enabled
@@ -330,7 +330,7 @@ FSP Configuration
     General: Use Mutexes: Disabled
     General: Use Recursive Mutexes: Disabled
     General: Use Counting Semaphores: Enabled
-    Hooks: Check For Stack Overflow: Disabled
+    Hooks: Check For Stack Overflow: Enabled
     General: Queue Registry Size: 10
     General: Use Queue Sets: Disabled
     General: Use Time Slicing: Enabled
@@ -342,7 +342,7 @@ FSP Configuration
     Memory Allocation: Clear Memory on Free: Disabled
     Memory Allocation: Support Static Allocation: Enabled
     Memory Allocation: Support Dynamic Allocation: Enabled
-    Memory Allocation: Total Heap Size: 10240
+    Memory Allocation: Total Heap Size: 102400
     Memory Allocation: Application Allocated Heap: Disabled
     Stats: Generate Run Time Stats: Disabled
     Timers: Use Timers: Enabled
@@ -361,7 +361,7 @@ FSP Configuration
     Optional Functions: vTaskDelay() Function: Enabled
     Optional Functions: xTaskGetSchedulerState() Function: Enabled
     Optional Functions: xTaskGetCurrentTaskHandle() Function: Enabled
-    Optional Functions: uxTaskGetStackHighWaterMark() Function: Disabled
+    Optional Functions: uxTaskGetStackHighWaterMark() Function: Enabled
     Optional Functions: xTaskGetIdleTaskHandle() Function: Disabled
     Optional Functions: eTaskGetState() Function: Disabled
     Optional Functions: xEventGroupSetBitFromISR() Function: Enabled
@@ -369,7 +369,7 @@ FSP Configuration
     Optional Functions: xTaskAbortDelay() Function: Disabled
     Optional Functions: xTaskGetHandle() Function: Disabled
     Optional Functions: xTaskResumeFromISR() Function: Enabled
-    RA: Hardware Stack Monitor: Disabled
+    RA: Hardware Stack Monitor: Enabled
     Logging: Print String Function: vLoggingPrint(x)
     Logging: Logging Include Time and Task Name: Disabled
     Logging: Debug Logging Name: Log Name
@@ -431,7 +431,7 @@ FSP Configuration
   Thread "debug_uart"
     Symbol: debug_uart
     Name: debug_uart
-    Stack size (bytes): 1024
+    Stack size (bytes): 8192
     Priority: 1
     Thread Context: NULL
     Memory Allocation: Dynamic
