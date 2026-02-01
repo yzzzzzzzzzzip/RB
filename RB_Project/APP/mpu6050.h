@@ -5,6 +5,8 @@
 #include "stdint.h"
 #include "stdio.h"
 #include "string.h"
+#include "FreeRTOS.h"
+#include "task.h"
 #ifndef M_PI
 #define M_PI 3.1415926535f  // 浮点型f，适配float计算，避免精度损失
 #endif
@@ -18,12 +20,12 @@ fsp_err_t MPU6050_Init_Config(void);
 fsp_err_t MPU6050_Read_SixAxis(void);
 void MPU6050_Calibrate(void);
 void MPU6050_Init_Attitude(void);
+
 // 全局变量声明（六轴物理值+姿态角）
 extern float AccelX_g, AccelY_g, AccelZ_g;
 extern float GyroX_dps, GyroY_dps, GyroZ_dps;
 extern float MPU6050_Temp;
 extern float Roll, Pitch, Yaw;
-extern uint32_t last_time ; 
 
 
 	/*	// 主循环：10ms一次读取+解算（100Hz），100ms一次打印（10Hz）
